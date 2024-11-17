@@ -1,0 +1,732 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><meta http-equiv="Content-Language" content="vi" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="author" content="&lt;%=AloNhaDat.utils.Constant.DOMAIN_NAME%>" />
+	<meta name="copyright" content="Copyright 2013 - 2024 Mua bán nhà đất "/>		
+	<link href="/publish/img/icon.png" rel="shortcut icon" type="image/x-icon" /><link rel="Stylesheet" href="../dat.css" />
+    <meta content='noindex,follow' name='robots'>  
+    <meta name="description" content="Bán đất Quận Cẩm Lệ, Đà Nẵng, bán đất nền, đất phân lô. Bán đất kiệt ô tô Trần Đình Nam, Hoà An, Cẩm Lệ, Đà Nẵng
+_ Kiệt ô tô 5.5m, khu dân cư dân trí
+_ Diện tích : 75m2 (5x15) Đất dư ngoài sổ 30m
+_ Hướng Tây bắc
+_ Thích hợp xây nhà định cư lâu dài
+_ Giá 1,85 tỷ (thương lượ - 6825580">
+    <meta name="keywords" content="bán đất nền, phân lô, bán đất dự án, 2024, đất nền Quận Cẩm Lệ, Đà Nẵng, tìm mua đất, bán đất liền kề, đất dịch vụ, mua bán đất, bán đất thổ cư, Quận Cẩm Lệ, Đà Nẵng, bán đất nền biệt thự, sổ đỏ chính chủ, sdcc, giá rẻ">
+
+<link rel="Stylesheet" href="/publish/css/pc-listproperty.css?v=201706250904" />
+   	
+    <script type="text/javascript" src="/publish/js/jquery.js"></script>	
+<title>
+	Bán đất kiệt ô tô Trần Đình Nam, Hoà An, Cẩm Lệ, Đà Nẵng - 6825580
+</title></head>
+<body>        
+
+<script type="text/javascript">
+    /*!
+    * JavaScript Cookie v2.1.4
+    * https://github.com/js-cookie/js-cookie
+    *
+    * Copyright 2006, 2015 Klaus Hartl & Fagner Brack
+    * Released under the MIT license
+    */
+    ; (function(factory) {
+        var registeredInModuleLoader = false;
+        if (typeof define === 'function' && define.amd) {
+            define(factory);
+            registeredInModuleLoader = true;
+        }
+        if (typeof exports === 'object') {
+            module.exports = factory();
+            registeredInModuleLoader = true;
+        }
+        if (!registeredInModuleLoader) {
+            var OldCookies = window.Cookies;
+            var api = window.Cookies = factory();
+            api.noConflict = function() {
+                window.Cookies = OldCookies;
+                return api;
+            };
+        }
+    } (function() {
+        function extend() {
+            var i = 0;
+            var result = {};
+            for (; i < arguments.length; i++) {
+                var attributes = arguments[i];
+                for (var key in attributes) {
+                    result[key] = attributes[key];
+                }
+            }
+            return result;
+        }
+
+        function init(converter) {
+            function api(key, value, attributes) {
+                var result;
+                if (typeof document === 'undefined') {
+                    return;
+                }
+
+                // Write
+
+                if (arguments.length > 1) {
+                    attributes = extend({
+                        path: '/'
+                    }, api.defaults, attributes);
+
+                    if (typeof attributes.expires === 'number') {
+                        var expires = new Date();
+                        expires.setMilliseconds(expires.getMilliseconds() + attributes.expires * 864e+5);
+                        attributes.expires = expires;
+                    }
+
+                    // We're using "expires" because "max-age" is not supported by IE
+                    attributes.expires = attributes.expires ? attributes.expires.toUTCString() : '';
+
+                    try {
+                        result = JSON.stringify(value);
+                        if (/^[\{\[]/.test(result)) {
+                            value = result;
+                        }
+                    } catch (e) { }
+
+                    if (!converter.write) {
+                        value = encodeURIComponent(String(value))
+						.replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g, decodeURIComponent);
+                    } else {
+                        value = converter.write(value, key);
+                    }
+
+                    key = encodeURIComponent(String(key));
+                    key = key.replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent);
+                    key = key.replace(/[\(\)]/g, escape);
+
+                    var stringifiedAttributes = '';
+
+                    for (var attributeName in attributes) {
+                        if (!attributes[attributeName]) {
+                            continue;
+                        }
+                        stringifiedAttributes += '; ' + attributeName;
+                        if (attributes[attributeName] === true) {
+                            continue;
+                        }
+                        stringifiedAttributes += '=' + attributes[attributeName];
+                    }
+                    return (document.cookie = key + '=' + value + stringifiedAttributes);
+                }
+
+                // Read
+
+                if (!key) {
+                    result = {};
+                }
+
+                // To prevent the for loop in the first place assign an empty array
+                // in case there are no cookies at all. Also prevents odd result when
+                // calling "get()"
+                var cookies = document.cookie ? document.cookie.split('; ') : [];
+                var rdecode = /(%[0-9A-Z]{2})+/g;
+                var i = 0;
+
+                for (; i < cookies.length; i++) {
+                    var parts = cookies[i].split('=');
+                    var cookie = parts.slice(1).join('=');
+
+                    if (cookie.charAt(0) === '"') {
+                        cookie = cookie.slice(1, -1);
+                    }
+
+                    try {
+                        var name = parts[0].replace(rdecode, decodeURIComponent);
+                        cookie = converter.read ?
+						converter.read(cookie, name) : converter(cookie, name) ||
+						cookie.replace(rdecode, decodeURIComponent);
+
+                        if (this.json) {
+                            try {
+                                cookie = JSON.parse(cookie);
+                            } catch (e) { }
+                        }
+
+                        if (key === name) {
+                            result = cookie;
+                            break;
+                        }
+
+                        if (!key) {
+                            result[name] = cookie;
+                        }
+                    } catch (e) { }
+                }
+
+                return result;
+            }
+
+            api.set = api;
+            api.get = function(key) {
+                return api.call(api, key);
+            };
+            api.getJSON = function() {
+                return api.apply({
+                    json: true
+                }, [].slice.call(arguments));
+            };
+            api.defaults = {};
+
+            api.remove = function(key, attributes) {
+                api(key, '', extend(attributes, {
+                    expires: -1
+                }));
+            };
+
+            api.withConverter = init;
+
+            return api;
+        }
+
+        return init(function() { });
+    }));
+</script>
+    <div id="wrapper">	
+        <div id="ctl00_pc_header">
+	        <div id="header">
+	            <div class="logo"><a href="/" title='Mua bán nhà đất' ><img src="/publish/img/logo.png" alt="Mua bán nhà đất"></a></div>
+	            <div class="banner-top"> 
+	            </div>   
+	        </div>
+	        <div class="reg-menu-box">		
+	            <div style="position:absolute; margin-left:5px;">
+                    <span style="position:absolute"><g:plusone width="65"></g:plusone></span> <span style="color:#d33320; margin-left: 100px; line-height: 25px; font-weight:bold">+1 để tin của bạn có vị trí cao trên google</span>
+                </div> 
+                 <div class="reg-menu">
+                 <span class="view-mobile" onclick="ViewWebVersion(2)">Mobile</span>
+                 <a class="regular-post" href="/dang-tin.html">Đăng tin miễn phí</a>
+                		   
+			        <a href="javascript:void(0)" class="register" onclick = "ShowRegisterForm()">Đăng ký thành viên</a>
+			        <a href="javascript:void(0)" class="login" onclick = "ShowLoginForm()">Đăng nhập</a>   
+		        
+		        </div>			    
+	        </div>	        	
+	        <div id="menu">  
+                <ul id="ctl00_mainmenu" class="menu"><li><a href='/' class='home' title='Mua bán nhà đất'></a></li><li><a href='/rao-vat/can-ban.html'>Nhà Đất Bán</a><ul><li><a href='/rao-vat/can-ban/nha-pho.html'>Cần bán nhà phố</a><li><a href='/rao-vat/can-ban/nha-rieng.html'>Cần bán nhà riêng</a><li><a href='/rao-vat/can-ban/biet-thu-lien-ke.html'>Cần bán biệt thự, liền kê</a><li><a href='/rao-vat/can-ban/chung-cu.html'>Cần bán căn hộ chung cư</a><li><a href='/rao-vat/can-ban/nha-hang-khach-san.html'>Cần bán nhà hàng, khách sạn</a><li><a href='/rao-vat/can-ban/van-phong.html'>Cần bán văn phòng</a><li><a href='/rao-vat/can-ban/phong-tro.html'>Cần bán phòng trọ</a><li><a href='/rao-vat/can-ban/trang-trai-khu-nghi-duong.html'>Cần bán trang trại, khu nghỉ dưỡng</a><li><a href='/rao-vat/can-ban/mat-bang-cua-hang.html'>Cần bán mặt bằng, cửa hàng</a><li><a href='/rao-vat/can-ban/dat-nen-phan-lo.html'>Cần bán đất nền, phân lô</a><li><a href='/rao-vat/can-ban/dat-nong-lam-nghiep.html'>Cần bán đất nông, lâm nghiệp</a><li><a href='/rao-vat/can-ban/cac-loai-khac.html'>Cần bán các loại khác</a></ul></li><li><a href='/rao-vat/cho-thue.html'>Nhà đất cho thuê</a><ul><li><a href='/rao-vat/cho-thue/nha-pho.html'>Cho thuê nhà phố</a><li><a href='/rao-vat/cho-thue/nha-rieng.html'>Cho thuê nhà riêng</a><li><a href='/rao-vat/cho-thue/biet-thu-lien-ke.html'>Cho thuê biệt thự, liền kê</a><li><a href='/rao-vat/cho-thue/chung-cu.html'>Cho thuê căn hộ chung cư</a><li><a href='/rao-vat/cho-thue/nha-hang-khach-san.html'>Cho thuê nhà hàng, khách sạn</a><li><a href='/rao-vat/cho-thue/van-phong.html'>Cho thuê văn phòng</a><li><a href='/rao-vat/cho-thue/phong-tro.html'>Cho thuê phòng trọ</a><li><a href='/rao-vat/cho-thue/trang-trai-khu-nghi-duong.html'>Cho thuê trang trại, khu nghỉ dưỡng</a><li><a href='/rao-vat/cho-thue/mat-bang-cua-hang.html'>Cho thuê mặt bằng, cửa hàng</a><li><a href='/rao-vat/cho-thue/dat-nen-phan-lo.html'>Cho thuê đất nền, phân lô</a><li><a href='/rao-vat/cho-thue/dat-nong-lam-nghiep.html'>Cho thuê đất nông, lâm nghiệp</a><li><a href='/rao-vat/cho-thue/cac-loai-khac.html'>Cho thuê các loại khác</a></ul></li><li><a href='https://alonhadat.com.vn/nha-dat/can-ban/dat-tho-cu-dat-o/14/binh-duong.html'>ban dat binh duong</a></li><li><a href='https://alonhadat.com.vn/nha-dat/can-ban/dat-tho-cu-dat-o/ho-chi-minh/151/huyen-binh-chanh.html'>Ban Dat Binh Chanh</a></li><li><a href='/chuyen-muc/tin-tuc.html'>Tin Tức</a><ul><li><a href='/chuyen-muc/thi-truong.html'>Thị trường</a></ul></li><li><a href='/lien-he-gop-y.html'>Liên hệ - Góp ý</a></li><li><a href='#'>Liên kết</a><ul><li><a href='https://alonhadat.com.vn/nha-dat/can-ban/dat-tho-cu-dat-o/ho-chi-minh/140/quan-9.html'>ban dat quan 9</a><li><a class='title' href='https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/3/da-nang.html'>Nhà đất Đà Nẵng</a></li><li><a class='title' href='https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/da-nang/589/quan-cam-le.html'>Nhà đất  Cẩm Lệ</a></li><li><a class='title' href='https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/phuong-hoa-an-quan-cam-le-px1128.html'>Nhà đất  Hòa An</a></li><li><a class='title' href='https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/duong-tran-dinh-nam-quan-cam-le-dp17534.html'>Nhà đất  Trần Đình Nam</a></li><li><a class='title' href='https://alonhadat.com.vn/nha-dat/can-ban/nha-trong-hem/3/da-nang.html'>Bán nhà Đà Nẵng</a></li><li><a class='title' href='https://alonhadat.com.vn/nha-dat/can-ban/nha-trong-hem/da-nang/589/quan-cam-le.html'>Bán nhà  Cẩm Lệ</a></li><li><a class='title' href='https://alonhadat.com.vn/nha-dat/can-ban/nha-trong-hem/phuong-hoa-an-quan-cam-le-px1128.html'>Bán nhà  Hòa An</a></li><li><a class='title' href='https://alonhadat.com.vn/nha-dat/can-ban/nha-trong-hem/duong-tran-dinh-nam-quan-cam-le-dp17534.html'>Bán nhà  Trần Đình Nam</a></li><li><a class='title' href='https://alonhadat.com.vn/nha-dat/can-ban/mat-bang/3/da-nang.html'>Bán mặt bằng Đà Nẵng</a></li><li><a class='title' href='https://alonhadat.com.vn/nha-dat/can-ban/mat-bang/da-nang/589/quan-cam-le.html'>Bán mặt bằng  Cẩm Lệ</a></li><li><a class='title' href='https://alonhadat.com.vn/nha-dat/can-ban/mat-bang/phuong-hoa-an-quan-cam-le-px1128.html'>Bán mặt bằng  Hòa An</a></li><li><a class='title' href='https://alonhadat.com.vn/nha-dat/can-ban/mat-bang/duong-tran-dinh-nam-quan-cam-le-dp17534.html'>Bán mặt bằng  Trần Đình Nam</a></li></ul></li><div class='clear'></div></ul>	        
+            </div>
+        </div>
+        
+        
+        <div class='body'>
+            
+    <div id="ctl00_content_top_link" class="top-link" itemscope="" itemtype="http://schema.org/BreadcrumbList"><span itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'><a itemprop='item' href='/'><span itemprop='name'>Trang chủ</span></a></span><span itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'><a itemprop='item' class='title' href='/rao-vat/can-ban/nha-dat.html'><span itemprop='name'>Cần bán</span></a></span><span itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'><a itemprop='item' class='title' href='/rao-vat/can-ban/dat-nen-phan-lo.html'><span itemprop='name'>Bán đất ở</span></a></span><span itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'><a itemprop='item' class='title' href='/rao-vat/can-ban/dat-nen-phan-lo/t3/da-nang.html'><span itemprop='name'>Bán đất ở Đà Nẵng</span></a></span><span itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'><a itemprop='item' class='title' href='/rao-vat/can-ban/dat-nen-phan-lo/h589/quan-cam-le.html'><span itemprop='name'>Bán đất ở  Cẩm Lệ</span></a></span><span itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'><a itemprop='item' class='title' href='/rao-vat/can-ban/dat-nen-phan-lo/p1128/phuong-hoa-an.html'><span itemprop='name'>Bán đất ở  Hòa An</span></a></span><span itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'><a itemprop='item' class='title' href='/rao-vat/can-ban/dat-nen-phan-lo/d17534/duong-tran-dinh-nam.html'><span itemprop='name'>Bán đất ở  Trần Đình Nam</span></a></span></div>	
+	<div class="top-line"></div>
+	<div id="ctl00_content_pc_content" class="content">
+		<div id="left">
+			<div class="property">
+				<div class='title'><h1>Bán đất kiệt ô tô Trần Đình Nam, Hoà An, Cẩm Lệ, Đà Nẵng</h1></div><div class='moreinfor1'><div><span class='title'>Thông tin cơ bản</span></div><div class='infor'><table vspace='0' hspace='0' cellspacing='0'><tr><td>Ngày đăng</td><td colspan='5'>22/10/2024</td></tr><tr><td>Mã tin</td><td>6825580</td><td>Hướng</td><td>Tây Bắc</td><td>Phòng ăn</td><td>---</td></tr><tr><td>Loại tin</td><td>Cần bán</td><td>Lộ giới</td><td>---</td><td>Nhà bếp</td><td>---</td></tr><tr><td>Loại BDS</td><td>Đất nền, phân lô</td><td>Pháp lý</td><td>Sổ hồng/ Sổ đỏ</td><td>Sân thượng</td><td>---</td></tr><tr><td>Chiều ngang</td><td>---</td><td>Số lầu</td><td>---</td><td>Chổ để xe hơi</td><td>---</td></tr><tr><td>Chiều dài</td><td>---</td><td>Số phòng ngủ</td><td>---</td><td>Chính chủ</td><td>---</td></tr><tr><td>Diện tích</td><td>75m<sup>2</sup></td><td>Giá</td><td colspan='3' class='price'>1,85 tỷ </td></tr></table></div></div><div class='images'><div class='imageview'><img id='limage' alt='Bán đất kiệt ô tô Trần Đình Nam, Hoà An, Cẩm Lệ, Đà Nẵng' src='/files/properti2024es//10/22/images/20241022_034702_6825580_0.jpg' onclick='showImage(this.src)'/></div><div class='image-list'><ul><li><img class='limage' alt='Bán đất kiệt ô tô Trần Đình Nam, Hoà An, Cẩm Lệ, Đà Nẵng - 0' src='../dat1.jpg' onclick='showImage(this.src)'/></li><li><img class='limage' alt='Bán đất kiệt ô tô Trần Đình Nam, Hoà An, Cẩm Lệ, Đà Nẵng - 1' src='/files/properties/2024/10/22/images/20241022_034702_6825580_1.jpg' onclick='showImage(this.src)'/></li><li><img class='limage' alt='Bán đất kiệt ô tô Trần Đình Nam, Hoà An, Cẩm Lệ, Đà Nẵng - 2' src='/files/properties/2024/10/22/images/20241022_034702_6825580_2.jpg' onclick='showImage(this.src)'/></li></ul><div class='clear'></div></div></div><div class='detail-title'>Thông tin mô tả</div><div class='detail text-content'>Bán đất kiệt ô tô Trần Đình Nam, Hoà An, Cẩm Lệ, Đà Nẵng
+_ Kiệt ô tô 5.5m, khu dân cư dân trí
+_ Diện tích : 75m2 (5x15) Đất dư ngoài sổ 30m
+_ Hướng Tây bắc
+_ Thích hợp xây nhà định cư lâu dài
+_ Giá 1,85 tỷ (thương lượng)
+LH: 0379.433.669</div>
+            <div class='contact'>
+                <div class='address'><span class='label'>Địa chỉ tài sản:</span><span class='value'> Đường Trần Đình Nam, Phường Hòa An, Quận Cẩm Lệ, Đà Nẵng</span></div>
+                <div class='contact-info'>
+	                <div class='title'>Thông tin liên hệ</div>
+	                <div class='content'>
+	                    <div class='name'>Lê Minh Lê</div>
+	                    <div class='fone'><a href='tel:0379433669'>0379.433.669</a></div>
+	                    <div class='introduce'></div>
+	                </div>
+	            </div>
+            </div><div class='utility'><span class='reflect' tabindex='0'>Phản ánh</span><span class='save' tabindex='0'>Lưu tin</span></div><input type='hidden' id='hddPropertyType' value='1'/><input type='hidden' id='hddPropertyId' value='6825580'/><input type='hidden' id='hddNguoiDang' value='355864' user='0'/>												
+				<div class="notices">
+				    <h3>Lưu ý:</h3>
+				    <p>Quý vị đang xem nội dung tin rao trong mục "<b>Bán đất nền, phân lô  Quận Cẩm Lệ, Đà Nẵng</b>". Mọi thông tin liên quan tới tin rao này là do người đăng tin đăng tải và chịu trách nhiệm. Chúng tôi luôn cố gắng để có chất lượng thông tin tốt nhất, nhưng chúng tôi không đảm bảo và không chịu trách nhiệm về bất kỳ nội dung nào liên quan tới tin rao này. Nếu quý vị phát hiện có sai sót hay vấn đề gì xin hãy thông báo cho chúng tôi.</p>
+				</div>				
+			</div><!--property-->		
+						
+				
+			
+			<div class="relative-property">
+				<div><div id="ctl00_content_relative_property_title" class="content-header"><h2>Cần bán Đất nền, phân lô tại Quận Cẩm Lệ</h2></div></div>
+				<div id="ctl00_content_relative_property_content" class="content-items"><div class='content-item'><div class='thumbnail'><a href='/-dat-kiet-do-phuc-tinh-khue-trung-cam-le-6879531.html'/><img src='/files/properties/2024/11/17/thumbnails/20241117_084040_6879531_0.jpg' alt='+ Đất kiệt đỗ Phúc Tịnh, Khuê Trung, Cẩm Lệ'/></a></div><div class='text'><div class='ct_title'><a href='/-dat-kiet-do-phuc-tinh-khue-trung-cam-le-6879531.html'>+ Đất kiệt đỗ Phúc Tịnh, Khuê Trung, Cẩm Lệ</a></div><div class='ct_date'>Hôm nay</div><div class='ct_brief'>+ Đất kiệt đỗ Phúc Tịnh, Khuê Trung, Cẩm Lệ 
++ DT 78 m2 (4,5*17). Kiệt đường nhựa 4m
++ Giá bán nhanh: 2,99 tỷ.
++ ĐT liên hệ: 0982303949.... <a href='/-dat-kiet-do-phuc-tinh-khue-trung-cam-le-6879531.html'></br><< xem chi tiết tin đăng >></a></div><div style='position:relative'><div class='ct_price'>2,99 tỷ </div></div><div class='ct_kt'><label>Kích thước:</label> 45x17m</div><div class='ct_dt'><label>Diện tích:</label> 78 m<sup>2</sup></div><div class='ct_dis'><label>Địa chỉ:</label> <a href='/rao-vat/can-ban/dat-nen-phan-lo/d17291/duong-do-thuc-tinh.html'>Đường Đỗ Thúc Tịnh</a>, <a href='/rao-vat/can-ban/dat-nen-phan-lo/p1133/phuong-khue-trung.html'>Phường Khuê Trung</a>, Quận Cẩm Lệ, Đà Nẵng</div></div><div class='clear'></div></div><div class='content-item'><div class='thumbnail'><a href='/ban-lo-dat-duong-pham-hung-dt-107m-khu-vuc-kinh-doanh-nam-cam-le-6878665.html'/><img src='/files/properties/2024/11/16/thumbnails/20241116_030740_6878665_0.jpg' alt='Bán lô đất đường Phạm Hùng - DT 107m - Khu vực kinh doanh Nam Cẩm Lệ'/></a></div><div class='text'><div class='ct_title'><a href='/ban-lo-dat-duong-pham-hung-dt-107m-khu-vuc-kinh-doanh-nam-cam-le-6878665.html'>Bán lô đất đường Phạm Hùng - DT 107m - Khu vực kinh doanh Nam Cẩm Lệ</a></div><div class='ct_date'>Hôm qua</div><div class='ct_brief'>- Đường 15m mặt tiền kinh doanh hiện hữu Phạm Hùng - Nam Cẩm Lệ - Đà Nẵng.
+
+- Hướng tây 
+- DT: 107m
+
+Vị trí dân cư sầm uất , Lưu lượng xe cô qua lại đông đúc 
+
+- Với mức giá thấp hơn đường 10m5 Kinh doanh doanh tr... <a href='/ban-lo-dat-duong-pham-hung-dt-107m-khu-vuc-kinh-doanh-nam-cam-le-6878665.html'></br><< xem chi tiết tin đăng >></a></div><div style='position:relative'><div class='ct_price'>5,68 tỷ </div></div><div class='ct_direct'><label>Hướng:</label> Tây</div><div class='ct_kt'><label>Kích thước:</label> 5x21,5m</div><div class='ct_dt'><label>Diện tích:</label> 107 m<sup>2</sup></div><div class='ct_dis'><label>Địa chỉ:</label> <a href='/rao-vat/can-ban/dat-nen-phan-lo/d10158/duong-pham-hung.html'>Đường Phạm Hùng</a>, <a href='/rao-vat/can-ban/dat-nen-phan-lo/p1132/phuong-hoa-xuan.html'>Phường Hòa Xuân</a>, Quận Cẩm Lệ, Đà Nẵng</div></div><div class='clear'></div></div><div class='content-item'><div class='thumbnail'><a href='/ban-dat-biet-thu-duong-bui-thien-ngo-gan-cau-nguyen-tri-phuong-vi-tri-vip-chi-co-1-k-6878256.html'/><img src='/files/properties/2024/11/16/thumbnails/20241116_105643_6878256_0.jpg' alt='Bán đất Biệt Thự đường Bùi Thiện Ngộ - Gần cầu Nguyễn Tri Phương - vị trí VIP-chỉ có 1  -K'/></a></div><div class='text'><div class='ct_title'><a href='/ban-dat-biet-thu-duong-bui-thien-ngo-gan-cau-nguyen-tri-phuong-vi-tri-vip-chi-co-1-k-6878256.html'>Bán đất Biệt Thự đường Bùi Thiện Ngộ - Gần cầu Nguyễn Tri Phương - vị trí VIP-chỉ có 1  -K</a></div><div class='ct_date'>Hôm qua</div><div class='ct_brief'>Bán đất Biệt Thự đường Bùi Thiện Ngộ - Gần cầu Nguyễn Tri Phương - vị trí VIP-chỉ có 1  -KHu Hoà Xuân -Đà Nẵng 
++ Đt 300m2 ( ngang 12x25) 
++ Hướng đông nam 
++ Giá bán 12 tỷ có bớt 
++Thuộc khu đô thị sinh thái Hoà Xuâ... <a href='/ban-dat-biet-thu-duong-bui-thien-ngo-gan-cau-nguyen-tri-phuong-vi-tri-vip-chi-co-1-k-6878256.html'></br><< xem chi tiết tin đăng >></a></div><div style='position:relative'><div class='ct_price'>12 tỷ </div></div><div class='ct_kt'><label>Kích thước:</label> ---</div><div class='ct_dt'><label>Diện tích:</label> 300 m<sup>2</sup></div><div class='ct_dis'><label>Địa chỉ:</label> <a href='/rao-vat/can-ban/dat-nen-phan-lo/p1132/phuong-hoa-xuan.html'>Phường Hòa Xuân</a>, Quận Cẩm Lệ, Đà Nẵng</div></div><div class='clear'></div></div><div class='content-item'><div class='thumbnail'><a href='/-gia-tot-dat-mt-hoang-minh-giam-gan-do-doc-lan-p-hoa-xuan-tp-da-nang-6878102.html'/><img src='/files/properties/2024/11/16/thumbnails/20241116_101312_6878102_0.jpg' alt='🍎 GIÁ TỐT 🍎 Đất MT Hoàng Minh Giám gần Đô Đốc Lân - P. Hoà Xuân, TP. Đà Nẵng'/></a></div><div class='text'><div class='ct_title'><a href='/-gia-tot-dat-mt-hoang-minh-giam-gan-do-doc-lan-p-hoa-xuan-tp-da-nang-6878102.html'>🍎 GIÁ TỐT 🍎 Đất MT Hoàng Minh Giám gần Đô Đốc Lân - P. Hoà Xuân, TP. Đà Nẵng</a></div><div class='ct_date'>Hôm qua</div><div class='ct_brief'>💎 Vị trí: Đường 5.5 vỉa hè 3m, dân cư đông đúc, an ninh tốt, gần khu tiện ích Chợ, Trường học, Công viên,...
+
+💎 Tiềm năng: Thích hợp xây nhà phố để ở hoặc đầu tư lâu dài, khu dân cư văn minh, hạ tầng hoàn thiện, giá ... <a href='/-gia-tot-dat-mt-hoang-minh-giam-gan-do-doc-lan-p-hoa-xuan-tp-da-nang-6878102.html'></br><< xem chi tiết tin đăng >></a></div><div style='position:relative'><div class='ct_price'>3,1 tỷ </div></div><div class='ct_direct'><label>Hướng:</label> Bắc</div><div class='ct_kt'><label>Kích thước:</label> 5x20m</div><div class='ct_dt'><label>Diện tích:</label> 100 m<sup>2</sup></div><div class='ct_dis'><label>Địa chỉ:</label> <a href='/rao-vat/can-ban/dat-nen-phan-lo/d10958/duong-hoang-minh-giam.html'>Đường Hoàng Minh Giám</a>, <a href='/rao-vat/can-ban/dat-nen-phan-lo/p1132/phuong-hoa-xuan.html'>Phường Hòa Xuân</a>, Quận Cẩm Lệ, Đà Nẵng</div></div><div class='clear'></div></div><div class='content-item'><div class='thumbnail'><a href='/ban-dat-bau-gia-1-hoa-tho-dong-quan-cam-le-tp-da-nang-dt-dat-sach-dep-nam-trong-k-6877648.html'/><img src='/files/properties/2024/11/16/thumbnails/20241116_072939_6877648_0.jpg' alt='Bán Đất Bàu Gia 1 - Hoà Thọ Đông, Quận Cẩm Lệ, Tp Đà Nẵng.DT   - Đất sạch đẹp, nằm trong k'/></a></div><div class='text'><div class='ct_title'><a href='/ban-dat-bau-gia-1-hoa-tho-dong-quan-cam-le-tp-da-nang-dt-dat-sach-dep-nam-trong-k-6877648.html'>Bán Đất Bàu Gia 1 - Hoà Thọ Đông, Quận Cẩm Lệ, Tp Đà Nẵng.DT   - Đất sạch đẹp, nằm trong k</a></div><div class='ct_date'>Hôm qua</div><div class='ct_brief'>Bán Đất Bàu Gia 1 - Hoà Thọ Đông, Quận Cẩm Lệ, Tp Đà Nẵng.DT 
+
+- Đất sạch đẹp, nằm trong khu dân cư đông đúc và dân trí cao
+- Tiện ích bao quanh : UBND phường, Chợ, Trường Học, Bệnh viện,.... nằm trong vòng bán kính 5... <a href='/ban-dat-bau-gia-1-hoa-tho-dong-quan-cam-le-tp-da-nang-dt-dat-sach-dep-nam-trong-k-6877648.html'></br><< xem chi tiết tin đăng >></a></div><div style='position:relative'><div class='ct_price'>3 tỷ </div></div><div class='ct_kt'><label>Kích thước:</label> 6x15m</div><div class='ct_dt'><label>Diện tích:</label> 90 m<sup>2</sup></div><div class='ct_dis'><label>Địa chỉ:</label> <a href='/rao-vat/can-ban/dat-nen-phan-lo/d13103/duong-bau-gia-thuong-1.html'>Đường Bàu Gia Thượng 1</a>, <a href='/rao-vat/can-ban/dat-nen-phan-lo/p1131/phuong-hoa-tho-dong.html'>Phường Hòa Thọ Đông</a>, Quận Cẩm Lệ, Đà Nẵng</div></div><div class='clear'></div></div><div class='content-item'><div class='thumbnail'><a href='/-gia-tot-dat-mt-do-doc-lan-gan-truong-thpt-nguyen-van-thoai-hoa-xuan-tp-da-nang-6876119.html'/><img src='/files/properties/2024/11/15/thumbnails/20241115_114259_6876119_0.jpg' alt='🍎 GIÁ TỐT 🍎 Đất MT Đô Đốc Lân gần Trường THPT Nguyễn Văn Thoại - Hoà Xuân, TP. Đà Nẵng'/></a></div><div class='text'><div class='ct_title'><a href='/-gia-tot-dat-mt-do-doc-lan-gan-truong-thpt-nguyen-van-thoai-hoa-xuan-tp-da-nang-6876119.html'>🍎 GIÁ TỐT 🍎 Đất MT Đô Đốc Lân gần Trường THPT Nguyễn Văn Thoại - Hoà Xuân, TP. Đà Nẵng</a></div><div class='ct_date'>15/11/2024</div><div class='ct_brief'>💎 Vị trí: Đường 10.5m vỉa hè 5m, sát góc ngã tư với Tế Hanh, đối diện Đất Trung Tâm Thương Mại, gần Trường Tiểu học Trần Văn Dư, Trường THPT Nguyễn Văn Thoại, Công viên, Chợ,...
+
+💎 Tiềm năng: Thích hợp xây Nhà phố ho... <a href='/-gia-tot-dat-mt-do-doc-lan-gan-truong-thpt-nguyen-van-thoai-hoa-xuan-tp-da-nang-6876119.html'></br><< xem chi tiết tin đăng >></a></div><div style='position:relative'><div class='ct_price'>3,75 tỷ </div></div><div class='ct_direct'><label>Hướng:</label> Tây</div><div class='ct_kt'><label>Kích thước:</label> 5x20m</div><div class='ct_dt'><label>Diện tích:</label> 100 m<sup>2</sup></div><div class='ct_dis'><label>Địa chỉ:</label> <a href='/rao-vat/can-ban/dat-nen-phan-lo/d11673/duong-do-doc-lan.html'>Đường Đô Đốc Lân</a>, <a href='/rao-vat/can-ban/dat-nen-phan-lo/p1132/phuong-hoa-xuan.html'>Phường Hòa Xuân</a>, Quận Cẩm Lệ, Đà Nẵng</div></div><div class='clear'></div></div><div class='content-item'><div class='thumbnail'><a href='/-ban-dat-duong-trung-luong-9-ngay-khu-dao-vip-hoa-xuan-huong-dong-nam-gia-hon-4ty-6875444.html'/><img src='/files/properties/2024/11/15/thumbnails/20241115_075851_6875444_0.jpg' alt='👉Bán Đất Đường Trung Lương 9- Ngay Khu Đảo Vip Hòa Xuân-Hướng Đông Nam- giá Hơn 4Tỷ'/></a></div><div class='text'><div class='ct_title'><a href='/-ban-dat-duong-trung-luong-9-ngay-khu-dao-vip-hoa-xuan-huong-dong-nam-gia-hon-4ty-6875444.html'>👉Bán Đất Đường Trung Lương 9- Ngay Khu Đảo Vip Hòa Xuân-Hướng Đông Nam- giá Hơn 4Tỷ</a></div><div class='ct_date'>15/11/2024</div><div class='ct_brief'>Bán Đất Trung Lương 9, Phường Hòa Xuân, Quận Cẩm Lệ
+✅ Diện Tích : 100m2 ( ngang 5m, dài 20m )
+✅ Hướng :  Đông Nam
+✅ Vị Trí : Đường 7m5 nằm gần góc đường Lê Hồng Sơn, gần sông thoáng mát.
+- Khu vip nhất Hòa Xuân, cơ s... <a href='/-ban-dat-duong-trung-luong-9-ngay-khu-dao-vip-hoa-xuan-huong-dong-nam-gia-hon-4ty-6875444.html'></br><< xem chi tiết tin đăng >></a></div><div style='position:relative'><div class='ct_price'>4,55 tỷ </div></div><div class='ct_direct'><label>Hướng:</label> Đông Nam</div><div class='ct_kt'><label>Kích thước:</label> ---</div><div class='ct_dt'><label>Diện tích:</label> 100 m<sup>2</sup></div><div class='ct_dis'><label>Địa chỉ:</label> <a href='/rao-vat/can-ban/dat-nen-phan-lo/d17563/duong-trung-luong-7.html'>Đường Trung Lương 7</a>, <a href='/rao-vat/can-ban/dat-nen-phan-lo/p1132/phuong-hoa-xuan.html'>Phường Hòa Xuân</a>, Quận Cẩm Lệ, Đà Nẵng</div></div><div class='clear'></div></div><div class='content-item'><div class='thumbnail'><a href='/-gia-tot-dat-duong-7-5m-mt-nguyen-van-tan-gan-nguyen-doa-p-hoa-xuan-tp-da-nang-6873775.html'/><img src='/files/properties/2024/11/14/thumbnails/20241114_103513_6873775_0.jpg' alt='🍎 GIÁ TỐT 🍎 Đất đường 7.5m MT Nguyễn Văn Tấn gần Nguyễn Đoá - P. Hoà Xuân, TP. Đà Nẵng'/></a></div><div class='text'><div class='ct_title'><a href='/-gia-tot-dat-duong-7-5m-mt-nguyen-van-tan-gan-nguyen-doa-p-hoa-xuan-tp-da-nang-6873775.html'>🍎 GIÁ TỐT 🍎 Đất đường 7.5m MT Nguyễn Văn Tấn gần Nguyễn Đoá - P. Hoà Xuân, TP. Đà Nẵng</a></div><div class='ct_date'>14/11/2024</div><div class='ct_brief'>💎 Vị trí: Đường 7.5m vỉa hè 4m, dân cư đông đúc, an ninh tốt, gần khu tiện ích Chợ, Trường học, Công viên,...
+
+💎 Tiềm năng: Thích hợp xây nhà phố để ở hoặc đầu tư lâu dài, khu dân cư văn minh, hạ tầng hoàn thiện, giá... <a href='/-gia-tot-dat-duong-7-5m-mt-nguyen-van-tan-gan-nguyen-doa-p-hoa-xuan-tp-da-nang-6873775.html'></br><< xem chi tiết tin đăng >></a></div><div style='position:relative'><div class='ct_price'>3,18 tỷ </div></div><div class='ct_direct'><label>Hướng:</label> Bắc</div><div class='ct_kt'><label>Kích thước:</label> 5x20m</div><div class='ct_dt'><label>Diện tích:</label> 100 m<sup>2</sup></div><div class='ct_dis'><label>Địa chỉ:</label> <a href='/rao-vat/can-ban/dat-nen-phan-lo/d12579/duong-nguyen-doa.html'>Đường Nguyễn Đóa</a>, <a href='/rao-vat/can-ban/dat-nen-phan-lo/p1132/phuong-hoa-xuan.html'>Phường Hòa Xuân</a>, Quận Cẩm Lệ, Đà Nẵng</div></div><div class='clear'></div></div><div class='content-item'><div class='thumbnail'><a href='/ban-dat-duong-nguyen-quang-lam-hoa-xuan-da-nang-6873247.html'/><img src='/files/properties/2024/11/14/thumbnails/20241114_082022_6873247_0.jpg' alt='Bán đất đường Nguyễn Quang Lâm, Hoà Xuân, Đà Nẵng'/></a></div><div class='text'><div class='ct_title'><a href='/ban-dat-duong-nguyen-quang-lam-hoa-xuan-da-nang-6873247.html'>Bán đất đường Nguyễn Quang Lâm, Hoà Xuân, Đà Nẵng</a></div><div class='ct_date'>14/11/2024</div><div class='ct_brief'>Đường 7m5 Nguyễn Quang Lâm - Hoà Xuân - Đà Nẵng
+- hướng Tây, lên số nhà 61. Xung quanh nhà cửa đẹp, dân cư đông, thân thiện. Gần các trường học như c1,c2,c3…
+- Dt 100m2
+- Giá 3t050 
+Lh e Thuý tlcc giá tốt... <a href='/ban-dat-duong-nguyen-quang-lam-hoa-xuan-da-nang-6873247.html'></br><< xem chi tiết tin đăng >></a></div><div style='position:relative'><div class='ct_price'>3,05 tỷ </div></div><div class='ct_direct'><label>Hướng:</label> Tây</div><div class='ct_kt'><label>Kích thước:</label> 5x20m</div><div class='ct_dt'><label>Diện tích:</label> 100 m<sup>2</sup></div><div class='ct_dis'><label>Địa chỉ:</label> <a href='/rao-vat/can-ban/dat-nen-phan-lo/p1132/phuong-hoa-xuan.html'>Phường Hòa Xuân</a>, Quận Cẩm Lệ, Đà Nẵng</div></div><div class='clear'></div></div><div class='content-item'><div class='thumbnail'><a href='/ban-lo-goc-dep-duong-kieu-son-den-phu-dong-kdc-nam-cau-cam-le-6871485.html'/><img src='/files/properties/2024/11/13/thumbnails/20241113_112549_6871485_0.jpg' alt='Bán Lô Góc Đẹp Đường Kiều Sơn Đen , Phù Đổng KDC Nam Cầu Cẩm Lệ'/></a></div><div class='text'><div class='ct_title'><a href='/ban-lo-goc-dep-duong-kieu-son-den-phu-dong-kdc-nam-cau-cam-le-6871485.html'>Bán Lô Góc Đẹp Đường Kiều Sơn Đen , Phù Đổng KDC Nam Cầu Cẩm Lệ</a></div><div class='ct_date'>Hôm qua</div><div class='ct_brief'>❌Bán Lô Góc Đường Kiều Sơn Đen -Phù Đổng 
+KDC Nam Cầu Cẩm Lệ -Hoà Xuân 
+-Diện Tích 154m2 
+-Hướng Tây Nam 
+-Khu Vực Đông Dân Cư , Nhộn Nhịp .Phù Hợp để Kinh Doanh 
+🌟Giá 5tyX 
+☎️LH 0901 643 843  MR Land Minh xem đất... <a href='/ban-lo-goc-dep-duong-kieu-son-den-phu-dong-kdc-nam-cau-cam-le-6871485.html'></br><< xem chi tiết tin đăng >></a></div><div style='position:relative'><div class='ct_price'>5,1 tỷ </div></div><div class='ct_direct'><label>Hướng:</label> Tây Nam</div><div class='ct_kt'><label>Kích thước:</label> 7,7x20,5m</div><div class='ct_dt'><label>Diện tích:</label> 154 m<sup>2</sup></div><div class='ct_dis'><label>Địa chỉ:</label> <a href='/rao-vat/can-ban/dat-nen-phan-lo/d12700/duong-phu-dong.html'>Đường Phù Đổng</a>, <a href='/rao-vat/can-ban/dat-nen-phan-lo/p1132/phuong-hoa-xuan.html'>Phường Hòa Xuân</a>, Quận Cẩm Lệ, Đà Nẵng</div></div><div class='clear'></div></div><div class='viewmore'><a href='/rao-vat/can-ban/dat-nen-phan-lo/h589/quan-cam-le.html'>Xem thêm các tin khác</a></div></div><!----end sale content----->		
+			</div>	
+		</div><!--left-->		
+		<div id="right">
+		    <div class="search-box">	
+    <div class="head">Tìm kiếm</div>			 
+    <table cellpadding='0' cellspacing='0'>
+	    <tbody>
+	        <tr>
+			    <td style='padding-top: 0px;'>
+			        <input type="text" class='location' placeholder='Nhập địa điểm cần tìm' />
+			        <div class='suggesstion'>
+			            <div class='title'>Gợi ý</div>
+			            <ul>
+			                <li>
+			                <span>
+			                    Nhập tên đường/phố, phường/xã, quận/huyện, tỉnh/thành phố hoặc tên dự án. Ví dụ: 
+			                    <br /><span style='color:#000000'>- Điện Biên Phủ, Bình Thạnh</span> 
+			                    <br /><span style='color:#000000'>- Phố Huế</span>
+			                    <br /><span style='color:#000000'>- Nha Trang</span>		              
+			                </span>
+			                </li>
+			                <li><span>Phải chọn các gợi ý chúng tôi đề xuất bên dưới để kết quả chính xác</span></li>
+			                <li><span>Nếu không nhập địa điểm ở đây, Quý vị có thể chọn lựa khu vực bằng các ô phía dưới trong công cụ tìm kiếm này</span></li>
+			            </ul>
+			        </div>
+			    </td>
+	        </tr>
+		    <tr>
+			    <td>
+				    <select class="demand">
+					    <option value="can-ban">Cần bán</option>
+					    <option value="cho-thue">Cho thuê</option>		
+					    <option value="can-mua">Cần mua</option>						
+					    <option value="can-thue">Cần thuê</option>
+				    </select>
+			    </td>
+			 </tr>
+			 <tr>	
+			    <td>
+				    <select class="property_type">
+                        <option value="nha-dat">--- Loại BĐS ---</option>
+                        <option value="nha-pho">Nhà phố</option>
+                        <option value="nha-rieng">Nhà riêng</option>
+                        <option value="biet-thu-lien-ke">Biệt thự, liền kề</option>
+                        <option value="chung-cu">Căn hộ chung cư</option>
+                        <option value="phong-tro">Phòng trọ</option>
+                        <option value="nha-hang-khach-san">Nhà hàng, khách sạn</option>
+                        <option value="van-phong">Văn phòng</option>
+                        <option value="trang-trai-khu-nghi-duong">Trang trại, khu nghỉ dưỡng</option>
+                        <option value="mat-bang-cua-hang">Mặt bằng, cửa hàng</option>
+                        <option value="dat-nen-phan-lo">Đất nền, phân lô</option>
+                        <option value="dat-nong-lam-nghiep">Đất nông, lâm nghiệp</option>
+                        <option value="nha-xuong">Nhà xưởng</option>
+                        <option value="cac-loai-khac">Các loại khác</option>                            
+                     </select>				
+			    </td>
+		    </tr>
+		    <tr>
+			    <td>
+				    <select class="province" onchange="LoadQuanHuyen();$('.hddStreet').val(0);$('.hddWard').val(0);$('#search .location').val('');">														 
+				        <option value='0'>--- Tỉnh/Thành</option>	
+					    <option value="1">Hà Nội</option>								
+<option value="2">Hồ Chí Minh</option>								
+<option value="3">Đà Nẵng</option>								
+<option value="4">Hải Phòng</option>								
+<option value="5">Cần Thơ</option>								
+<option value="6">An Giang</option>								
+<option value="7">Bà Rịa-Vũng Tàu</option>								
+<option value="8">Bạc Liêu</option>								
+<option value="9">Bắc Kạn</option>								
+<option value="10">Bắc Giang</option>						    							
+<option value="12">Bắc Ninh</option>								
+<option value="13">Bến Tre</option>								
+<option value="14">Bình Dương</option>								
+<option value="15">Bình Định</option>								
+<option value="16">Bình Phước</option>								
+<option value="17">Bình Thuận</option>								
+<option value="18">Cà Mau</option>								
+<option value="19">Cao Bằng</option>								
+<option value="20">Đắk Lắk</option>								
+<option value="21">Đăk Nông</option>								
+<option value="22">Điện Biên</option>								
+<option value="23">Đồng Nai</option>								
+<option value="24">Đồng Tháp</option>								
+<option value="25">Gia Lai</option>								
+<option value="26">Hà Giang</option>								
+<option value="27">Hà Nam</option>								
+<option value="28">Hà Tĩnh</option>		
+<option value="11">Hải Dương</option>							
+<option value="29">Hậu Giang</option>								
+<option value="30">Hòa Bình</option>								
+<option value="31">Hưng Yên</option>								
+<option value="32">Khánh Hòa</option>								
+<option value="33">Kiên Giang</option>								
+<option value="34">Kon Tum</option>								
+<option value="35">Lai Châu</option>								
+<option value="36">Lâm Đồng</option>								
+<option value="37">Lạng Sơn</option>								
+<option value="38">Lào Cai</option>								
+<option value="39">Long An</option>								
+<option value="40">Nam Định</option>								
+<option value="41">Nghệ An</option>								
+<option value="42">Ninh Bình</option>								
+<option value="43">Ninh Thuận</option>								
+<option value="44">Phú Thọ</option>								
+<option value="45">Phú Yên</option>								
+<option value="46">Quảng Bình</option>								
+<option value="47">Quảng Nam</option>								
+<option value="48">Quảng Ngãi</option>								
+<option value="49">Quảng Ninh</option>								
+<option value="50">Quảng Trị</option>								
+<option value="51">Sóc Trăng</option>								
+<option value="52">Sơn La</option>								
+<option value="53">Tây Ninh</option>								
+<option value="54">Thái Bình</option>								
+<option value="55">Thái Nguyên</option>								
+<option value="56">Thanh Hóa</option>								
+<option value="57">Thừa Thiên-Huế</option>								
+<option value="58">Tiền Giang</option>								
+<option value="59">Trà Vinh</option>								
+<option value="60">Tuyên Quang</option>								
+<option value="61">Vĩnh Long</option>								
+<option value="62">Vĩnh Phúc</option>								
+<option value="63">Yên Bái</option>								
+				    </select>
+			    </td>
+			 </tr>
+			 <tr>
+			    <td>
+				    <select class="district" onclick="huyen_click()" onchange="$('.hddStreet').val(0);$('.hddWard').val(0);$('#search .location').val('');">
+					    <option value="0">--- Quận/Huyện</option>							
+				    </select>
+			    </td>
+		    </tr>				
+		    <tr>
+			    <td>
+				    <select class="direct">
+					    <option value="0">--- Hướng</option>
+					    <option value="1">Đông</option>
+					    <option value="2">Tây</option>
+					    <option value="3">Nam</option>
+					    <option value="4">Bắc</option>
+					    <option value="5">Đông Nam</option>
+					    <option value="6">Đông Bắc</option>
+					    <option value="7">Tây Nam</option>
+					    <option value="8">Tây Bắc</option>            
+				    </select>
+			    </td>
+		    </tr>
+		    <tr>
+			    <td>
+			        <select class='square'>
+			            <option value="0">--- Diện tích</option>
+			            <option value="1">Dưới 30 m2</option>
+			            <option value="2">30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;50 m2</option>
+			            <option value="3">50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;70 m2</option>						        
+					    <option value="4">70&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;100 m2</option>	    					
+					    <option value="5">100&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;150 m2</option>    
+					    <option value="6">150&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;200 m2</option>      
+					    <option value="7">200&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;250 m2</option>  
+					    <option value="8">250&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;300 m2</option>  
+					    <option value="9">300&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;350 m2</option>  
+					    <option value="10">350&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;400 m2</option>  
+					    <option value="11">400&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;600 m2</option>  	
+					    <option value="12">600&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;800 m2</option>  	
+					    <option value="13">800&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;1000 m2</option>  	
+					    <option value="14">Trên 1000 m2</option>  							    	
+			        </select>
+			    </td>
+			 </tr>
+			 <tr>
+			    <td>
+			        <select class='price'>
+			            <option value="0">--- Mức giá</option>
+			            <option value="1">Dưới 1 triệu</option>
+			            <option value="2">1 - 3 triệu</option>
+			            <option value="3">3 - 5 triệu</option>
+			            <option value="4">5 - 10 triệu</option>
+			            <option value="5">10 - 15 triệu</option>
+			            <option value="6">15 - 20 triệu</option>
+			            <option value="7">20 - 30 triệu</option>
+			            <option value="8">30 - 40 triệu</option>
+			            <option value="9">40 - 60 triệu</option>
+			            <option value="10">60 - 80 triệu</option>
+			            <option value="11">80 - 100 triệu</option>
+			            <option value="12">100 - 300 triệu</option>
+			            <option value="13">300 - 500 triệu</option>
+			            <option value="14">500 - 800 triệu</option>
+			            <option value="15">800 - 1 tỷ</option>
+			            <option value="16">1 - 2 tỷ</option>
+			            <option value="17">2 - 3 tỷ</option>
+			            <option value="18">3 - 4 tỷ</option>
+			       	    <option value="19">4 - 6 tỷ</option>	
+			       	    <option value="20">6 - 8 tỷ</option>	
+			       	    <option value="21">8 - 10 tỷ</option>	
+			       	    <option value="22">10 - 15 tỷ</option>	
+			       	    <option value="23">15 - 20 tỷ</option>	
+			       	    <option value="24">20 - 30 tỷ</option>	
+			       	    <option value="25">30 - 60 tỷ</option>
+			       	    <option value="26">Trên 60 tỷ</option>								    
+			        </select>
+			    </td>
+		    </tr>					
+		    <tr>
+			    <td colspan="4" align="center" >
+			    <div style="position:relative">
+			        <div class="btnsearch" onclick="Search()">Tìm Kiếm</div>	
+			    </div>
+			    </td>
+		    </tr>
+	    </tbody>
+    </table>						
+</div><div style='margin:5px 0px 5px 0px;'>
+    <a href='https://alonhadat.com.vn' target="_blank" title='Alonhadat.com.vn' ><img src='/publish/img/alonhadat.com.vn.jpg' alt='Alonhadat.com.vn' style='border:1px solid #E0E0E0;' /></a>
+    <a href='https://banxehoicu.vn' target="_blank" title='Bán xe hơi cũ' ><img src='/publish/img/banxehoicu.vn.jpg' alt='Ban xe hoi cu' style='border:1px solid #E0E0E0;' /></a>
+</div>
+			<div class="banner-center"></div>				
+			<div class="right-navigation-box">	
+			    <div id="ctl00_content_groupByProject" class="item groupbyproject">
+					<div class="title">	
+						<h2 id="ctl00_content_groupByPropertyProjectTitle">Bán đất nền, phân lô tại các dự án ở Quận Cẩm Lệ</h2>
+					</div>
+					<div id="ctl00_content_groupByPropertyProjectContent" class="content"><ul><li><a href='/can-ban-dat-nen-phan-lo/khu-do-thi-sinh-thai-hoa-xuan-pr766.html' title='Ban dat o Khu do thi sinh thai Hoa Xuan'>Bán đất ở <b>Khu đô thị sinh thái Hoà Xuân</b></a> (<span class='number'>26</span>)</li><li><a href='/can-ban-dat-nen-phan-lo/nam-cau-nguyen-tri-phuong-pr692.html' title='Ban dat o Nam cau Nguyen Tri Phuong'>Bán đất ở <b>Nam cầu Nguyễn Tri Phương</b></a> (<span class='number'>13</span>)</li><li><a href='/can-ban-dat-nen-phan-lo/hoa-xuan-dream-home-pr694.html' title='Ban dat o Hoa Xuan - Dream Home'>Bán đất ở <b>Hoà Xuân - Dream Home</b></a> (<span class='number'>3</span>)</li></ul></div>
+				</div>		    
+				<div class="item groupbydistrict">
+					<div class="title">	
+						<h2 id="ctl00_content_groupByPropertyDistrictTitle">Bán đất nền, phân lô tại Đà Nẵng</h2>
+					</div>
+					<div id="ctl00_content_groupByPropertyDistrict" class="content"><ul><li><a title='Ban dat nen, phan lo Quan Hai Chau' href='/rao-vat/can-ban/dat-nen-phan-lo/h584/quan-hai-chau.html'>Bán đất ở <b>Quận Hải Châu</b></a></li><li><a title='Ban dat nen, phan lo Quan Thanh Khe' href='/rao-vat/can-ban/dat-nen-phan-lo/h585/quan-thanh-khe.html'>Bán đất ở <b>Quận Thanh Khê</b></a></li><li><a title='Ban dat nen, phan lo Quan Son Tra' href='/rao-vat/can-ban/dat-nen-phan-lo/h586/quan-son-tra.html'>Bán đất ở <b>Quận Sơn Trà</b></a></li><li><a title='Ban dat nen, phan lo Quan Ngu Hanh Son' href='/rao-vat/can-ban/dat-nen-phan-lo/h587/quan-ngu-hanh-son.html'>Bán đất ở <b>Quận Ngũ Hành Sơn</b></a></li><li><a title='Ban dat nen, phan lo Quan Lien Chieu' href='/rao-vat/can-ban/dat-nen-phan-lo/h588/quan-lien-chieu.html'>Bán đất ở <b>Quận Liên Chiểu</b></a></li><li><a title='Ban dat nen, phan lo Quan Cam Le' href='/rao-vat/can-ban/dat-nen-phan-lo/h589/quan-cam-le.html'>Bán đất ở <b>Quận Cẩm Lệ</b></a></li><li><a title='Ban dat nen, phan lo Huyen Hoa Vang' href='/rao-vat/can-ban/dat-nen-phan-lo/h590/huyen-hoa-vang.html'>Bán đất ở <b>Huyện Hòa Vang</b></a></li><li><a title='Ban dat nen, phan lo Huyen Hoang Sa' href='/rao-vat/can-ban/dat-nen-phan-lo/h712/huyen-hoang-sa.html'>Bán đất ở <b>Huyện Hoàng Sa</b></a></li></ul></div>
+				</div>						
+			</div>		
+		</div><!--right-->		
+		<div class="clear"></div>		
+	</div>	 
+	
+
+        </div>
+        <div id="ctl00_pc_footer">
+            <div class="house-bottom-navigation">
+    <ul>
+        <li><a href="/rao-vat/can-ban/nha-dat/t1/ha-noi.html" title="Ban nha dat Ha Noi">Bán nhà đất Hà Nội</a></li><li><a href="/rao-vat/can-ban/nha-dat/t2/ho-chi-minh.html" title="Ban nha dat Ho Chi Minh">Bán nhà đất Hồ Chí Minh</a></li><li><a href="/rao-vat/can-ban/nha-dat/t3/da-nang.html" title="Ban nha dat Da Nang">Bán nhà đất Đà Nẵng</a></li><li><a href="/rao-vat/can-ban/nha-dat/t4/hai-phong.html" title="Ban nha dat Hai Phong">Bán nhà đất Hải Phòng</a></li><li><a href="/rao-vat/can-ban/nha-dat/t5/can-tho.html" title="Ban nha dat Can Tho">Bán nhà đất Cần Thơ</a></li><li><a href="/rao-vat/can-ban/nha-dat/t6/an-giang.html" title="Ban nha dat An Giang">Bán nhà đất An Giang</a></li><li><a href="/rao-vat/can-ban/nha-dat/t7/ba-ria-vung-tau.html" title="Ban nha dat Ba Ria Vung Tau">Bán nhà đất Bà Rịa Vũng Tàu</a></li><li><a href="/rao-vat/can-ban/nha-dat/t8/bac-lieu.html" title="Ban nha dat Bac Lieu">Bán nhà đất Bạc Liêu</a></li>
+        <li><a href="/rao-vat/can-ban/nha-dat/t10/bac-giang.html" title="Ban nha dat Bac Giang">Bán nhà đất Bắc Giang</a></li><li><a href="/rao-vat/can-ban/nha-dat/t11/hai-duong.html" title="Ban nha dat Hai Duong">Bán nhà đất Hải Dương</a></li><li><a href="/rao-vat/can-ban/nha-dat/t12/bac-ninh.html" title="Ban nha dat Bac Ninh">Bán nhà đất Bắc Ninh</a></li><li><a href="/rao-vat/can-ban/nha-dat/t13/ben-tre.html" title="Ban nha dat Ben Tre">Bán nhà đất Bến Tre</a></li><li><a href="/rao-vat/can-ban/nha-dat/t14/binh-duong.html" title="Ban nha dat Binh Duong">Bán nhà đất Bình Dương</a></li><li><a href="/rao-vat/can-ban/nha-dat/t15/binh-dinh.html" title="Ban nha dat Binh Dinh">Bán nhà đất Bình Định</a></li><li><a href="/rao-vat/can-ban/nha-dat/t16/binh-phuoc.html" title="Ban nha dat Binh Phuoc">Bán nhà đất Bình Phước</a></li><li><a href="/rao-vat/can-ban/nha-dat/t17/binh-thuan.html" title="Ban nha dat Binh Thuan">Bán nhà đất Bình Thuận</a></li><li><a href="/rao-vat/can-ban/nha-dat/t18/ca-mau.html" title="Ban nha dat Ca Mau">Bán nhà đất Cà Mau</a></li><li><a href="/rao-vat/can-ban/nha-dat/t20/dak-lak.html" title="Ban nha dat Dak Lak">Bán nhà đất Đắk Lắk</a></li><li><a href="/rao-vat/can-ban/nha-dat/t21/dak-nong.html" title="Ban nha dat Dak Nong">Bán nhà đất Đăk Nông</a></li><li><a href="/rao-vat/can-ban/nha-dat/t22/dien-bien.html" title="Ban nha dat Dien Bien">Bán nhà đất Điện Biên</a></li><li><a href="/rao-vat/can-ban/nha-dat/t23/dong-nai.html" title="Ban nha dat Dong Nai">Bán nhà đất Đồng Nai</a></li><li><a href="/rao-vat/can-ban/nha-dat/t24/dong-thap.html" title="Ban nha dat Dong Thap">Bán nhà đất Đồng Tháp</a></li><li><a href="/rao-vat/can-ban/nha-dat/t25/gia-lai.html" title="Ban nha dat Gia Lai">Bán nhà đất Gia Lai</a></li>
+        <li><a href="/rao-vat/can-ban/nha-dat/t27/ha-nam.html" title="Ban nha dat Ha Nam">Bán nhà đất Hà Nam</a></li><li><a href="/rao-vat/can-ban/nha-dat/t28/ha-tinh.html" title="Ban nha dat Ha Tinh">Bán nhà đất Hà Tĩnh</a></li><li><a href="/rao-vat/can-ban/nha-dat/t29/hau-giang.html" title="Ban nha dat Hau Giang">Bán nhà đất Hậu Giang</a></li><li><a href="/rao-vat/can-ban/nha-dat/t30/hoa-binh.html" title="Ban nha dat Hoa Binh">Bán nhà đất Hòa Bình</a></li><li><a href="/rao-vat/can-ban/nha-dat/t31/hung-yen.html" title="Ban nha dat Hung Yen">Bán nhà đất Hưng Yên</a></li><li><a href="/rao-vat/can-ban/nha-dat/t32/khanh-hoa.html" title="Ban nha dat Khanh Hoa">Bán nhà đất Khánh Hòa</a></li><li><a href="/rao-vat/can-ban/nha-dat/t33/kien-giang.html" title="Ban nha dat Kien Giang">Bán nhà đất Kiên Giang</a></li><li><a href="/rao-vat/can-ban/nha-dat/t34/kon-tum.html" title="Ban nha dat Kon Tum">Bán nhà đất Kon Tum</a></li>
+        <li><a href="/rao-vat/can-ban/nha-dat/t36/lam-dong.html" title="Ban nha dat Lam Dong">Bán nhà đất Lâm Đồng</a></li>
+        <li><a href="/rao-vat/can-ban/nha-dat/t39/long-an.html" title="Ban nha dat Long An">Bán nhà đất Long An</a></li><li><a href="/rao-vat/can-ban/nha-dat/t40/nam-dinh.html" title="Ban nha dat Nam Dinh">Bán nhà đất Nam Định</a></li><li><a href="/rao-vat/can-ban/nha-dat/t41/nghe-an.html" title="Ban nha dat Nghe An">Bán nhà đất Nghệ An</a></li><li><a href="/rao-vat/can-ban/nha-dat/t42/ninh-binh.html" title="Ban nha dat Ninh Binh">Bán nhà đất Ninh Bình</a></li><li><a href="/rao-vat/can-ban/nha-dat/t43/ninh-thuan.html" title="Ban nha dat Ninh Thuan">Bán nhà đất Ninh Thuận</a></li>
+        <li><a href="/rao-vat/can-ban/nha-dat/t45/phu-yen.html" title="Ban nha dat Phu Yen">Bán nhà đất Phú Yên</a></li><li><a href="/rao-vat/can-ban/nha-dat/t46/quang-binh.html" title="Ban nha dat Quang Binh">Bán nhà đất Quảng Bình</a></li><li><a href="/rao-vat/can-ban/nha-dat/t47/quang-nam.html" title="Ban nha dat Quang Nam">Bán nhà đất Quảng Nam</a></li><li><a href="/rao-vat/can-ban/nha-dat/t48/quang-ngai.html" title="Ban nha dat Quang Ngai">Bán nhà đất Quảng Ngãi</a></li><li><a href="/rao-vat/can-ban/nha-dat/t49/quang-ninh.html" title="Ban nha dat Quang Ninh">Bán nhà đất Quảng Ninh</a></li><li><a href="/rao-vat/can-ban/nha-dat/t50/quang-tri.html" title="Ban nha dat Quang Tri">Bán nhà đất Quảng Trị</a></li><li><a href="/rao-vat/can-ban/nha-dat/t51/soc-trang.html" title="Ban nha dat Soc Trang">Bán nhà đất Sóc Trăng</a></li><li><a href="/rao-vat/can-ban/nha-dat/t53/tay-ninh.html" title="Ban nha dat Tay Ninh">Bán nhà đất Tây Ninh</a></li><li><a href="/rao-vat/can-ban/nha-dat/t54/thai-binh.html" title="Ban nha dat Thai Binh">Bán nhà đất Thái Bình</a></li><li><a href="/rao-vat/can-ban/nha-dat/t55/thai-nguyen.html" title="Ban nha dat Thai Nguyen">Bán nhà đất Thái Nguyên</a></li><li><a href="/rao-vat/can-ban/nha-dat/t56/thanh-hoa.html" title="Ban nha dat Thanh Hoa">Bán nhà đất Thanh Hóa</a></li><li><a href="/rao-vat/can-ban/nha-dat/t57/hue.html" title="Ban nha dat Hue">Bán nhà đất Huế</a></li><li><a href="/rao-vat/can-ban/nha-dat/t58/tien-giang.html" title="Ban nha dat Tien Giang">Bán nhà đất Tiền Giang</a></li><li><a href="/rao-vat/can-ban/nha-dat/t59/tra-vinh.html" title="Ban nha dat Tra Vinh">Bán nhà đất Trà Vinh</a></li><li><a href="/rao-vat/can-ban/nha-dat/t61/vinh-long.html" title="Ban nha dat Vinh Long">Bán nhà đất Vĩnh Long</a></li><li><a href="/rao-vat/can-ban/nha-dat/t62/vinh-phuc.html" title="Ban nha dat Vinh Phuc">Bán nhà đất Vĩnh Phúc</a></li><li><a href="/rao-vat/can-ban/nha-dat/t63/yen-bai.html" title="Ban nha dat Yen Bai">Bán nhà đất Yên Bái</a></li>
+   </ul>
+</div>	
+            <div class="footer">
+		        <div class="bottom-navigation"><a href="/"><strong>Mua bán nhà đất</strong></a> |<a href="/tro-giup-huong-dan/quy-dinh-su-dung">Quy định sử dụng</a> | <a href="/tro-giup-huong-dan/huong-dan">Hướng dẫn - Trợ Giúp</a> | <a href="/bando.html">Xem bản đồ</a> | <a href="/lien-he-gop-y.html">Liên hệ - Góp ý</a> </div>
+		        <div class='about'>		        	
+		            <div>
+		            Địện thoại hỗ trợ: 0942.335.349 <br />
+		            Copyright © 2013 - 2024 123nhadatviet.com. All rights reserved.<br />         
+		            ® Ghi rõ nguồn "123nhadatviet.com" khi phát hành lại thông tin từ website này.
+		            </div>		 
+                </div>		
+	        </div><!--end footer -->	
+	        <a href="javascript:void(0)" title="Lên đầu trang" id="to_top" style="display: inline;"></a>
+	    </div>
+	    
+	    <div class='guest-config'>
+	        <div class='head'></div>
+	    </div>
+    </div><!--wrapper-->    
+    
+<div class="banner banner-left"></div>  
+<div class="banner banner-right"></div>    
+<!-------- login- form------------------>
+<div id="register-form" class="register-form"></div><!--register-->
+<div id="login-form" class="login-form">
+    <div class="loading"></div>
+    <div class="title">Đăng nhập<span class='exit'></span></div>				
+    <div class='input-form'>
+        <div class="row message"></div>
+        <div class='row'>
+	        <div class='col1'>
+		        Tên truy cập
+	        </div>
+	        <div class='col2'>
+		        <input id="account" type="text"  maxlength="50"/>						
+	        </div>	
+	        <div class='clear'></div>					
+        </div>
+        <div class='row'>
+	        <div class='col1'>
+		        Mật khẩu
+	        </div>
+	        <div class='col2'>
+		        <input id="password"  type="password"  maxlength="50"/>	
+		        <input id="remember"  type="checkbox"/> Duy trì đăng nhập					
+	        </div>	
+	        <div class='clear'></div>		        				
+        </div>
+        <div class='row'>
+            <div class='col1'></div>
+            <div class='col2'>
+                <span class="show-recover-form" onclick="closeForm('login-form');ShowRecoverForm()" >Quên mật khẩu ?</span> 
+                <span class="show-register-form" onclick="ShowRegisterForm()">Đăng ký</span>
+            </div>
+            <div class='clear'></div>
+        </div>						
+        <div class='row'>
+	        <div class='col1'></div>	        	
+	        <div class="col2 button">					
+			        <span class='login' onclick="Login()" >Đăng nhập</span>
+			        <span class='close' onclick="closeForm('login-form')" >Thoát</span></a>
+	        </div>	
+	        <div class='clear'></div>
+        </div>	
+    </div>
+</div> 
+<div id="recover-form" class="recover-form">
+    <div class="loading"></div>
+    <div class="title">Phục hồi mật khẩu <span class='exit'></span></div>				
+    <div class='input-form'>
+        <div class='row message'>
+        </div>
+        <div class='row'>
+            <div>Nhập tên đăng nhập và địa chỉ email đã đăng ký tài khoản</div>
+        </div>
+        <div class='row'>
+            <div class='col1'>
+	            Tên truy cập
+            </div>
+            <div class='col2'>
+	            <input id="username" type="text"  maxlength="50"/>						
+            </div>						
+        </div>	
+        <div class='row'>
+            <div class='col1'>
+	            Email
+            </div>
+            <div class='col2'>
+	            <input id="email" type="text"  maxlength="50"/>						
+            </div>						
+        </div>	
+        <div class='row' style='font-style:italic'>Hoặc dùng <b>số điện thoại</b> đăng ký liên hệ bộ phận hỗ trợ</div>
+        <div class='row'>
+            <div class='col1'>		
+            </div>	
+            <div class='col2 button'>					
+		            <span class='recover' onclick="Recover()" >Gửi</span> <span class='close' onclick ="closeForm('recover-form')" >Đóng</span>
+            </div>	
+        </div>	
+    </div>
+</div>    
+
+<select name="ctl00$hddSalePrice" id="ctl00_hddSalePrice" class="hddsaleprice" style="display:none">
+	<option value="0">------ Mức gi&#225; ------</option>
+	<option value="9">40 triệu  - 60 triệu </option>
+	<option value="10">60 triệu  - 80 triệu </option>
+	<option value="11">80 triệu  - 100 triệu </option>
+	<option value="12">100 triệu  - 300 triệu </option>
+	<option value="13">300 triệu  - 500 triệu </option>
+	<option value="14">500 triệu  - 800 triệu </option>
+	<option value="15">800 triệu  - 1 tỷ </option>
+	<option value="16">1 tỷ  - 2 tỷ </option>
+	<option value="17">2 tỷ  - 3 tỷ </option>
+	<option value="18">3 tỷ  - 4 tỷ </option>
+	<option value="19">4 tỷ  - 6 tỷ </option>
+	<option value="20">6 tỷ  - 8 tỷ </option>
+	<option value="21">8 tỷ  - 10 tỷ </option>
+	<option value="22">10 tỷ  - 15 tỷ </option>
+	<option value="23">15 tỷ  - 20 tỷ </option>
+	<option value="24">20 tỷ  - 30 tỷ </option>
+	<option value="25">30 tỷ  - 60 tỷ </option>
+	<option value="26">Tr&#234;n 60 tỷ </option>
+	<option value="0">Tất cả mức gi&#225;</option>
+</select>
+<select name="ctl00$hddrentPrice" id="ctl00_hddrentPrice" class="hddrentprice" style="display:none">
+	<option value="0">------ Mức gi&#225; ------</option>
+	<option value="1">0 - 1 triệu </option>
+	<option value="2">1 triệu  - 3 triệu </option>
+	<option value="3">3 triệu  - 5 triệu </option>
+	<option value="4">5 triệu  - 10 triệu </option>
+	<option value="5">10 triệu  - 15 triệu </option>
+	<option value="6">15 triệu  - 20 triệu </option>
+	<option value="7">20 triệu  - 30 triệu </option>
+	<option value="8">30 triệu  - 40 triệu </option>
+	<option value="9">40 triệu  - 60 triệu </option>
+	<option value="10">60 triệu  - 80 triệu </option>
+	<option value="11">80 triệu  - 100 triệu </option>
+	<option value="12">100 triệu  - 300 triệu </option>
+	<option value="13">300 triệu  - 500 triệu </option>
+	<option value="0">Tất cả mức gi&#225;</option>
+</select>  
+
+<div id="fade" class="black_overlay"></div>	 
+<div id="ctl00_links" class="links"></div>
+<input name="ctl00$hddCurrentTextDate" type="hidden" id="ctl00_hddCurrentTextDate" class="hddCurrentTextDate" value="241117" />
+
+
+<input name="ctl00$footer$hddSDemand" type="hidden" id="ctl00_footer_hddSDemand" class="hddSDemandId" value="can-ban" />
+<input name="ctl00$footer$hddSPropertyTypeId" type="hidden" id="ctl00_footer_hddSPropertyTypeId" class="hddSPropertyTypeId" value="dat-nen-phan-lo" />
+<input name="ctl00$footer$hddSProvinceId" type="hidden" id="ctl00_footer_hddSProvinceId" class="hddSProvinceId" value="3" />
+<input name="ctl00$footer$hddSDistrictId" type="hidden" id="ctl00_footer_hddSDistrictId" class="hddSDistrictId" value="589" />
+<input name="ctl00$footer$hddSSquareId" type="hidden" id="ctl00_footer_hddSSquareId" class="hddSSquareId" value="0" />
+<input name="ctl00$footer$hddSPriceId" type="hidden" id="ctl00_footer_hddSPriceId" class="hddSPriceId" value="0" />
+<input name="ctl00$footer$hddSDirectId" type="hidden" id="ctl00_footer_hddSDirectId" class="hddSDirectId" value="0" />
+<input name="ctl00$footer$hddWardId" type="hidden" id="ctl00_footer_hddWardId" class="hddWard" value="0" />
+<input name="ctl00$footer$hddStreetId" type="hidden" id="ctl00_footer_hddStreetId" class="hddStreet" value="0" />
+<input name="ctl00$footer$hddProvinceId" type="hidden" id="ctl00_footer_hddProvinceId" class="province-id" value="3" />
+<input name="ctl00$footer$page_id" type="hidden" id="ctl00_footer_page_id" class="page-id" value="2" />
+	
+
+ <script type="text/javascript" src="/publish/js/pc-property.js?v=201706250904"></script>
+<script type="text/javascript" src="/publish/js/jquery.autocomplete.js"></script> 
+ 
+ <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyAxHXGhW56-s4AaeKv_blItwSRWW_7wo-0"></script>
+
+
+<script type="text/javascript" src="/publish/js/common.js?v=201706250904"></script>
+
+	
+<script type="text/javascript" src="/publish/js/pc-common.js?v=201706250904"></script>
+<script type="text/javascript" src="/publish/js/jquery.autocomplete.js"></script>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+    (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script>
+<script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+  m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-52369797-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</body>
+</html>
